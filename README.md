@@ -14,3 +14,4 @@ Most problems come from Project Euler and LeetCode.
 | [Even Fibonnaci Numbers](https://projecteuler.net/problem=2)     | [here](./python/project-euler/even-fibonacci/solution.py)             |
 | [Largest Prime Factor](https://projecteuler.net/problem=3)       | [here](./python/project-euler/largest-prime-factor/solution.py)       |
 | [Largest Palindrome Product](https://projecteuler.net/problem=3) | [here](./python/project-euler/largest-palindrome-product/solution.py) |
+| [Smallest multiple](https://projecteuler.net/problem=4)          | [here](./python/project-euler/smallest-multiple/solution.py)          |
