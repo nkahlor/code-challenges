@@ -16,3 +16,4 @@ Most problems come from Project Euler and LeetCode.
 | [Largest Palindrome Product](https://projecteuler.net/problem=3) | [here](./python/project-euler/largest-palindrome-product/solution.py) |
 | [Smallest multiple](https://projecteuler.net/problem=4)          | [here](./python/project-euler/smallest-multiple/solution.py)          |
 | [Sum Square Difference](https://projecteuler.net/problem=5)      | [here](./python/project-euler/sum-square-difference/solution.py)      |
+| [10001'st Prime](https://projecteuler.net/problem=6)             | [here](./python/project-euler/10001st-prime/solution.py)              |
