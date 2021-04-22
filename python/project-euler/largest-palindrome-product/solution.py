@@ -4,6 +4,9 @@ A palindromic number reads the same both ways. The largest palindrome made from 
 Find the largest palindrome made from the product of two 3-digit numbers.
 """
 
+import time
+
+
 def is_palindrome(x):
     str_x = str(x)
     j = len(str_x) - 1
@@ -30,5 +33,7 @@ def largest_palindrome_product(num_digits):
         max_j_val = max_j_val - 1
     return max_pal
 
-
+start = time.perf_counter()
 print(largest_palindrome_product(3))
+end = time.perf_counter()
+print(end - start)
