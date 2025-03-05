@@ -1,5 +1,9 @@
+import os
+import sys
 from typing import Self
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+from decorators import time_it
 
 triangle = """75
 95 64
@@ -43,6 +47,7 @@ def deserialize_input(in_str: str):
         curr_line = []
     return new_node
 
+@time_it
 def max_path_sum(root: Node):
 
     def dfs(node: Node):
