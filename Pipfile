@@ -1,0 +1,20 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[requires]
+python_version = "3.13"
+
+[dev-packages]
+black = "*"
+flake8 = "*"
+isort = "*"
+mypy = "*"
+flake8-bugbear = "*"
+pytest-benchmark = "*"
+pytest = "*"
+
+[scripts]
+format = "black ."
+lint = "flake8 --append-config=setup.cfg"
