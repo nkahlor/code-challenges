@@ -1,5 +1,5 @@
 import pytest
-from utils.number_theory import get_proper_divisors
+from utils.number_theory import get_proper_divisors, fibonacci, count_digits
 
 
 class TestGetProperDivisors:
@@ -47,3 +47,69 @@ class TestGetProperDivisors:
     def test_negative_number(self):
         with pytest.raises(ValueError):
             get_proper_divisors(-6)
+
+
+class TestFibonacci:
+    def test_base_cases(self):
+        assert fibonacci(1) == 1
+        assert fibonacci(2) == 1
+
+    def test_small_fibonacci_numbers(self):
+        assert fibonacci(3) == 2
+        assert fibonacci(4) == 3
+        assert fibonacci(5) == 5
+        assert fibonacci(6) == 8
+        assert fibonacci(7) == 13
+        assert fibonacci(8) == 21
+
+    def test_larger_fibonacci_numbers(self):
+        assert fibonacci(10) == 55
+        assert fibonacci(15) == 610
+        assert fibonacci(20) == 6765
+
+    def test_fibonacci_sequence_property(self):
+        for n in range(3, 15):
+            assert fibonacci(n) == fibonacci(n - 1) + fibonacci(n - 2)
+
+
+class TestCountDigits:
+    def test_zero(self):
+        assert count_digits(0) == 1
+
+    def test_single_digit_positive(self):
+        assert count_digits(1) == 1
+        assert count_digits(5) == 1
+        assert count_digits(9) == 1
+
+    def test_single_digit_negative(self):
+        assert count_digits(-1) == 1
+        assert count_digits(-5) == 1
+        assert count_digits(-9) == 1
+
+    def test_two_digit_numbers(self):
+        assert count_digits(10) == 2
+        assert count_digits(25) == 2
+        assert count_digits(99) == 2
+        assert count_digits(-10) == 2
+        assert count_digits(-25) == 2
+        assert count_digits(-99) == 2
+
+    def test_three_digit_numbers(self):
+        assert count_digits(100) == 3
+        assert count_digits(456) == 3
+        assert count_digits(999) == 3
+        assert count_digits(-100) == 3
+        assert count_digits(-456) == 3
+        assert count_digits(-999) == 3
+
+    def test_larger_numbers(self):
+        assert count_digits(1000) == 4
+        assert count_digits(12345) == 5
+        assert count_digits(1000000) == 7
+        assert count_digits(-1000) == 4
+        assert count_digits(-12345) == 5
+        assert count_digits(-1000000) == 7
+
+    def test_very_large_numbers(self):
+        assert count_digits(123456789012345) == 15
+        assert count_digits(-123456789012345) == 15

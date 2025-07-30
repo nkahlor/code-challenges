@@ -1,4 +1,5 @@
-from math import isqrt
+from math import isqrt, log10
+from functools import cache
 
 
 def get_proper_divisors(n: int) -> list[int]:
@@ -18,3 +19,19 @@ def get_proper_divisors(n: int) -> list[int]:
                 divisors.append(divisor_pair)
 
     return divisors
+
+
+@cache
+def fibonacci(n: int) -> int:
+    if n == 1 or n == 2:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+
+def count_digits(n: int) -> int:
+    if n == 0:
+        return 1
+    elif n > 0:
+        return int(log10(n)) + 1
+    else:
+        return int(log10(-n)) + 1
