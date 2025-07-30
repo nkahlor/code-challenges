@@ -2,6 +2,108 @@
 
 Solutions to selected [Project Euler](https://projecteuler.net/archives) problems, written in Python.
 
+## Getting Started
+
+### Prerequisites
+
+- **Python 3.13+** (as specified in `Pipfile`)
+- **pipenv** for dependency management
+- **PowerShell** (for running utility scripts)
+
+### Installation
+
+1. **Fork and clone the repository:**
+
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/code-challenges.git
+   cd code-challenges
+   ```
+
+2. **Install dependencies using pipenv:**
+   ```bash
+   pipenv install --dev
+   ```
+
+### Project Structure
+
+```
+code-challenges/
+├── solutions/          # Python solution files (001.py, 002.py, etc.)
+├── data/              # Input data files for problems that require them
+├── tests/             # Test files and benchmarks
+├── utils/             # Utility modules (e.g., number theory functions)
+├── execute.ps1        # PowerShell script to run solutions
+├── new_problem.ps1    # PowerShell script to create new solution files
+├── Pipfile           # Python dependencies and scripts
+└── README.md         # This file
+```
+
+### Usage
+
+#### Running Solutions
+
+**Option 1: Run the latest solution**
+
+```powershell
+.\execute.ps1
+```
+
+**Option 2: Run a specific solution**
+
+```powershell
+.\execute.ps1 -ScriptName "022.py"
+```
+
+**Option 3: Using pipenv directly**
+
+```bash
+pipenv run python -m solutions.022
+```
+
+**Option 4: Using pipenv script**
+
+```bash
+pipenv run solution
+```
+
+#### Creating New Solutions
+
+To create a new solution file with the next sequential number:
+
+```powershell
+.\new_problem.ps1
+```
+
+This will create a new file (e.g., `024.py`) in the `solutions/` directory with a basic template.
+
+#### Development Commands
+
+**Format code:**
+
+```bash
+pipenv run format
+```
+
+**Lint code:**
+
+```bash
+pipenv run lint
+```
+
+**Run tests:**
+
+```bash
+pipenv run test
+```
+
+### Adding Your Own Solutions
+
+1. Use `.\new_problem.ps1` to create a new solution file
+2. Implement your solution in the `solve()` function (putting it in the solve function makes benchmarking convenient)
+3. Test your solution by running it with `.\execute.ps1`
+4. Add any required data files to the `data/` directory
+5. Update this README table with your new problem
+
 | Problem                                                                       | Solution                     |
 | ----------------------------------------------------------------------------- | ---------------------------- |
 | [1. Multiples of 3 and 5](https://projecteuler.net/problem=1)                 | [001.py](./solutions/001.py) |
@@ -25,3 +127,5 @@ Solutions to selected [Project Euler](https://projecteuler.net/archives) problem
 | [19. Counting Sundays](https://projecteuler.net/problem=19)                   | [019.py](./solutions/019.py) |
 | [20. Factorial Digit Sum](https://projecteuler.net/problem=20)                | [020.py](./solutions/020.py) |
 | [21. Amicable Numbers](https://projecteuler.net/problem=21)                   | [021.py](./solutions/021.py) |
+| [22. Names Scores](https://projecteuler.net/problem=22)                       | [022.py](./solutions/022.py) |
+| [23. Non-abundant Sums](https://projecteuler.net/problem=23)                  | [023.py](./solutions/023.py) |
