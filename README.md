@@ -31,36 +31,30 @@ Solutions to selected [Project Euler](https://projecteuler.net/archives) problem
 
 ### Prerequisites
 
-- **Python 3.13+** (as specified in `Pipfile`)
+- **pyenv** not strictly needed, but highly recommended (if not using, check Pipfile for the python version you need)
 - **pipenv** for dependency management
 - **PowerShell** (for running utility scripts)
 
 ### Installation
 
-1. **Fork and clone the repository:**
+**Install dependencies using pipenv:**
 
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/code-challenges.git
-   cd code-challenges
-   ```
-
-2. **Install dependencies using pipenv:**
-   ```bash
-   pipenv install --dev
-   ```
+```bash
+pipenv install --dev
+```
 
 ### Project Structure
 
 ```
 code-challenges/
 ├── solutions/          # Python solution files (001.py, 002.py, etc.)
-├── data/              # Input data files for problems that require them
-├── tests/             # Test files and benchmarks
-├── utils/             # Utility modules (e.g., number theory functions)
-├── execute.ps1        # PowerShell script to run solutions
-├── new_problem.ps1    # PowerShell script to create new solution files
-├── Pipfile           # Python dependencies and scripts
-└── README.md         # This file
+├── data/               # Input data files for problems that require them
+├── tests/              # Test files and benchmarks
+├── utils/              # Utility modules (e.g., number theory functions)
+├── execute.ps1         # PowerShell script to run solutions
+├── new_problem.ps1     # PowerShell script to create new solution files
+├── Pipfile             # Python dependencies and scripts
+└── README.md           # This file
 ```
 
 ### Usage
@@ -70,13 +64,13 @@ code-challenges/
 **Option 1: Run the latest solution**
 
 ```powershell
-.\execute.ps1
+pipenv run solution
 ```
 
 **Option 2: Run a specific solution**
 
 ```powershell
-.\execute.ps1 -ScriptName "022.py"
+pipenv run solution -- "022.py"
 ```
 
 **Option 3: Using pipenv directly**
@@ -85,21 +79,13 @@ code-challenges/
 pipenv run python -m solutions.022
 ```
 
-**Option 4: Using pipenv script**
-
-```bash
-pipenv run solution
-```
-
 #### Creating New Solutions
 
-To create a new solution file with the next sequential number:
+To create a new solution file with the next sequential number in the solutions folder:
 
 ```powershell
 .\new_problem.ps1
 ```
-
-This will create a new file (e.g., `024.py`) in the `solutions/` directory with a basic template.
 
 #### Development Commands
 
