@@ -18,3 +18,4 @@ pytest = "*"
 [scripts]
 format = "black ."
 lint = "flake8 --append-config=setup.cfg"
+test = "pytest ./tests --benchmark-skip"

@@ -1,8 +1,8 @@
-from utils.number_theory import get_divisors
+from utils.number_theory import get_proper_divisors
 
 
 def sum_proper_divisors(n: int) -> int:
-    return sum(get_divisors(n)) - n
+    return sum(get_proper_divisors(n))
 
 
 def solve(n: int = 10000) -> int:
