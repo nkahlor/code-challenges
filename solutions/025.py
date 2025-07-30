@@ -1,13 +1,12 @@
-from utils.number_theory import count_digits, fibonacci
+from utils.number_theory import fibonacci_until
+
+
+def fibonacci_nth_digits(n_digits: int) -> int:
+    return fibonacci_until(pow(10, n_digits - 1))
 
 
 def solve() -> int:
-    x = 1
-    fibonacci_number = 0
-    while count_digits(fibonacci_number) < 1000:
-        fibonacci_number = fibonacci(x)
-        x += 1
-    return x
+    return fibonacci_nth_digits(1000)
 
 
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
 import pytest
-from utils.number_theory import get_proper_divisors, fibonacci, count_digits
+from utils.number_theory import get_proper_divisors, fibonacci_until, count_digits
 
 
 class TestGetProperDivisors:
@@ -49,27 +49,35 @@ class TestGetProperDivisors:
             get_proper_divisors(-6)
 
 
-class TestFibonacci:
+class TestFibonacciUntil:
     def test_base_cases(self):
-        assert fibonacci(1) == 1
-        assert fibonacci(2) == 1
+        assert fibonacci_until(1) == 1
+        assert fibonacci_until(2) == 3
 
-    def test_small_fibonacci_numbers(self):
-        assert fibonacci(3) == 2
-        assert fibonacci(4) == 3
-        assert fibonacci(5) == 5
-        assert fibonacci(6) == 8
-        assert fibonacci(7) == 13
-        assert fibonacci(8) == 21
+    def test_exact_fibonacci_values(self):
+        assert fibonacci_until(1) == 1
+        assert fibonacci_until(2) == 3
+        assert fibonacci_until(3) == 4
+        assert fibonacci_until(5) == 5
+        assert fibonacci_until(8) == 6
+        assert fibonacci_until(13) == 7
+        assert fibonacci_until(21) == 8
 
-    def test_larger_fibonacci_numbers(self):
-        assert fibonacci(10) == 55
-        assert fibonacci(15) == 610
-        assert fibonacci(20) == 6765
+    def test_between_fibonacci_values(self):
+        assert fibonacci_until(4) == 5
+        assert fibonacci_until(6) == 6
+        assert fibonacci_until(9) == 7
+        assert fibonacci_until(14) == 8
 
-    def test_fibonacci_sequence_property(self):
-        for n in range(3, 15):
-            assert fibonacci(n) == fibonacci(n - 1) + fibonacci(n - 2)
+    def test_larger_values(self):
+        assert fibonacci_until(55) == 10
+        assert fibonacci_until(100) == 12
+        assert fibonacci_until(1000) == 17
+
+    def test_power_of_10_targets(self):
+        assert fibonacci_until(10) == 7
+        assert fibonacci_until(100) == 12
+        assert fibonacci_until(1000) == 17
 
 
 class TestCountDigits:
