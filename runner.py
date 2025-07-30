@@ -99,9 +99,6 @@ def run_solution(script_path: Path) -> None:
     except ImportError as e:
         print(f"Error importing {module_name}: {e}")
         sys.exit(1)
-    except Exception as e:
-        print(f"Error executing solve function: {e}")
-        sys.exit(1)
 
 
 def main():
