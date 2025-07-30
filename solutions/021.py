@@ -10,10 +10,11 @@ def solve(n: int = 10000) -> int:
 
     for a in range(1, n):
         b = sum_proper_divisors(a)
-        possibly_amicable = sum_proper_divisors(b)
-        if a == possibly_amicable and a != b:
-            amicable_numbers.add(a)
-            amicable_numbers.add(b)
+        if b > 0:
+            possibly_amicable = sum_proper_divisors(b)
+            if a == possibly_amicable and a != b:
+                amicable_numbers.add(a)
+                amicable_numbers.add(b)
 
     return sum(amicable_numbers)
 
