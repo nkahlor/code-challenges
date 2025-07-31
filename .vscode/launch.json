@@ -5,7 +5,7 @@
             "name": "Debug Python Module",
             "type": "debugpy",
             "request": "launch",
-            "module": "solutions.027",
+            "module": "solutions.028",
             "console": "integratedTerminal"
         }
     ]
