@@ -26,6 +26,11 @@ Solutions to selected [Project Euler](https://projecteuler.net/archives) problem
 | [21. Amicable Numbers](https://projecteuler.net/problem=21) | [021.py](./solutions/021.py) |
 | [22. Names Scores](https://projecteuler.net/problem=22) | [022.py](./solutions/022.py) |
 | [23. Non-abundant Sums](https://projecteuler.net/problem=23) | [023.py](./solutions/023.py) |
+| [24. Lexicographic Permutations](https://projecteuler.net/problem=24) | [024.py](./solutions/024.py) |
+| [25. 1000-digit Fibonacci Number](https://projecteuler.net/problem=25) | [025.py](./solutions/025.py) |
+| [26. Reciprocal Cycles](https://projecteuler.net/problem=26) | [026.py](./solutions/026.py) |
+| [27. Quadratic Primes](https://projecteuler.net/problem=27) | [027.py](./solutions/027.py) |
+| [28. Number Spiral Diagonals](https://projecteuler.net/problem=28) | [028.py](./solutions/028.py) |
 
 ## Getting Started
 
