@@ -31,6 +31,7 @@ Solutions to selected [Project Euler](https://projecteuler.net/archives) problem
 | [26. Reciprocal Cycles](https://projecteuler.net/problem=26) | [026.py](./solutions/026.py) |
 | [27. Quadratic Primes](https://projecteuler.net/problem=27) | [027.py](./solutions/027.py) |
 | [28. Number Spiral Diagonals](https://projecteuler.net/problem=28) | [028.py](./solutions/028.py) |
+| [29. Distinct Powers](https://projecteuler.net/problem=29) | [029.py](./solutions/029.py) |
 
 ## Getting Started
 
@@ -46,20 +47,6 @@ Solutions to selected [Project Euler](https://projecteuler.net/archives) problem
 
 ```bash
 pipenv install --dev
-```
-
-### Project Structure
-
-```
-code-challenges/
-├── solutions/          # Python solution files (001.py, 002.py, etc.)
-├── data/               # Input data files for problems that require them
-├── tests/              # Test files and benchmarks
-├── utils/              # Utility modules (e.g., number theory functions)
-├── execute.ps1         # PowerShell script to run solutions
-├── new_problem.ps1     # PowerShell script to create new solution files
-├── Pipfile             # Python dependencies and scripts
-└── README.md           # This file
 ```
 
 ### Usage
@@ -116,6 +103,6 @@ pipenv run test
 
 1. Use `.\new_problem.ps1` to create a new solution file
 2. Implement your solution in the `solve()` function (putting it in the solve function makes benchmarking convenient)
-3. Test your solution by running it with `.\execute.ps1`
+3. Test your solution by running it with `pipenv run solution`
 4. Add any required data files to the `data/` directory
 5. Update this README table with your new problem
