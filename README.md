@@ -32,6 +32,7 @@ Solutions to selected [Project Euler](https://projecteuler.net/archives) problem
 | [27. Quadratic Primes](https://projecteuler.net/problem=27) | [027.py](./solutions/027.py) |
 | [28. Number Spiral Diagonals](https://projecteuler.net/problem=28) | [028.py](./solutions/028.py) |
 | [29. Distinct Powers](https://projecteuler.net/problem=29) | [029.py](./solutions/029.py) |
+| [30. Digit Fifth Powers](https://projecteuler.net/problem=30) | [030.py](./solutions/030.py) |
 
 ## Getting Started
 
