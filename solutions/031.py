@@ -1,38 +1,25 @@
-denominations = [1, 2, 5, 10, 20, 50, 100, 200]
-paths: set[str] = set()
-
-cache: dict[int, int] = {}
-
-
-def dfs(target: int, path: list[str]) -> int:
-    if target == 0:
-        normalized_path = "->".join(sorted(path[:]))
-        if normalized_path in paths:
-            return 0
-
-        return 1
-    elif target < 0:
-        return 0
-
-    if target in cache:
-        return cache[target]
-
-    ways_to_split = 0
-    for denomination in denominations:
-        path.append(f"{denomination}")
-        remaining = target - denomination
-        ways_to_split += dfs(remaining, path)
-        path.pop()
-    cache[target] = ways_to_split
-    return ways_to_split
-
-
 def solve() -> int:
     target = 200
-    val = dfs(target, [])
-    # print(paths)
-    # print(val)
-    return len(paths)
+    denominations = [1, 2, 5, 10, 20, 50, 100, 200]
+
+    cache: dict[tuple[int, int], int] = {}
+
+    def dfs(target: int, i: int) -> int:
+        if target == 0:
+            return 1
+        if target < 0 or i >= len(denominations):
+            return 0
+
+        if (i, target) in cache:
+            return cache[(i, target)]
+
+        ways_with_coin = dfs(target - denominations[i], i)
+        ways_without_coin = dfs(target, i + 1)
+        result = ways_with_coin + ways_without_coin
+        cache[(i, target)] = ways_with_coin + ways_without_coin
+        return result
+
+    return dfs(target, 0)
 
 
 if __name__ == "__main__":
