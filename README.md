@@ -33,6 +33,8 @@ Solutions to selected [Project Euler](https://projecteuler.net/archives) problem
 | [28. Number Spiral Diagonals](https://projecteuler.net/problem=28) | [028.py](./solutions/028.py) |
 | [29. Distinct Powers](https://projecteuler.net/problem=29) | [029.py](./solutions/029.py) |
 | [30. Digit Fifth Powers](https://projecteuler.net/problem=30) | [030.py](./solutions/030.py) |
+| [31. Coin Sums](https://projecteuler.net/problem=31) | [031.py](./solutions/031.py) |
+| [32. Pandigital Products](https://projecteuler.net/problem=32) | [032.py](./solutions/032.py) |
 
 ## Getting Started
 
