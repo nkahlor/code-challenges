@@ -31,8 +31,6 @@ Max constraint: 9999/100 = 99.99, so y ≤ 99 (but y must be 3-digit)
 
 """
 
-from utils.number_theory import count_digits
-
 
 def is_pandigital(
     nums: list[int], digits: frozenset[int] = frozenset([1, 2, 3, 4, 5, 6, 7, 8, 9])
@@ -55,7 +53,7 @@ def solve() -> int:
         max_y = min(9876, 9876 // x)
         for y in range(min_y, max_y + 1):
             product = x * y
-            if count_digits(product) == 4 and is_pandigital([x, y, product]):
+            if is_pandigital([x, y, product]):
                 result.add(product)
 
     for x in range(12, 100):
@@ -63,7 +61,7 @@ def solve() -> int:
         max_y = min(987, 9876 // x)
         for y in range(min_y, max_y + 1):
             product = x * y
-            if count_digits(product) == 4 and is_pandigital([x, y, product]):
+            if is_pandigital([x, y, product]):
                 result.add(product)
 
     return sum(result)
