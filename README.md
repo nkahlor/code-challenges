@@ -23,6 +23,7 @@ Most problems come from Project Euler and LeetCode.
 | [Special Pythagorean Triplet](https://projecteuler.net/problem=8) | [here](./python/project-euler/special-pythagorean-triplet/solution.py) |
 | [Largest Product in a Grid](https://projecteuler.net/problem=9)   | [here](./python/project-euler/largest-product-in-grid/solution.py)     |
 | [Power Digit Sum](https://projecteuler.net/problem=16)            | [here](./python/project-euler/power-digit-sum/solution.py)             |
+| [Digit Cancelling Fractions](https://projecteuler.net/problem=33) | [here](./python/project-euler/digit-cancelling-fractions/solution.py)  |
 
 ## LeetCode
 
