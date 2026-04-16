@@ -23,23 +23,18 @@ upper bound: 2540160
 """
 
 
-def digit_factorial(x: int) -> int:
-    if x < 0 or x > 9:
-        raise ValueError("Integer passed in is not a digit")
-
-    fact_map = {
-        0: 1,
-        1: 1,
-        2: 2,
-        3: 6,
-        4: 24,
-        5: 120,
-        6: 720,
-        7: 5040,
-        8: 40320,
-        9: 362880,
-    }
-    return fact_map[x]
+fact_map = {
+    0: 1,
+    1: 1,
+    2: 2,
+    3: 6,
+    4: 24,
+    5: 120,
+    6: 720,
+    7: 5040,
+    8: 40320,
+    9: 362880,
+}
 
 
 overall_sum = 0
@@ -48,7 +43,7 @@ for x in range(10, 2540160):
     digit_fact_sum = 0
     while x > 0:
         digit = x % 10
-        digit_fact_sum += digit_factorial(digit)
+        digit_fact_sum += fact_map[digit]
         x = x // 10
 
     if original_num == digit_fact_sum:
